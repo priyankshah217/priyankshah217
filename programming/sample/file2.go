@@ -1,14 +1,14 @@
 package sample
 
-type department struct {
+type Department struct {
 	deptName string
-	emp      employee
+	emp      Employee
 }
 
 type departmentHandler interface {
 	getDepartmentDetails() string
 }
 
-func (dept department) getDepartmentDetails() string {
+func (dept Department) getDepartmentDetails() string {
 	return dept.deptName + " :: " + dept.emp.getEmployeeName()
 }

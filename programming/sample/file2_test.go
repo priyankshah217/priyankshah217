@@ -5,7 +5,7 @@ import "testing"
 func Test_department_getDepartmentDetails(t *testing.T) {
 	type fields struct {
 		deptName string
-		emp      employee
+		emp      Employee
 	}
 	tests := []struct {
 		name   string
@@ -16,7 +16,7 @@ func Test_department_getDepartmentDetails(t *testing.T) {
 			"Sample Test",
 			fields{
 				deptName: "Mechanical",
-				emp: employee{
+				emp: Employee{
 					firstName: "Rahul",
 					lastName:  "Dravid",
 				},
@@ -26,7 +26,7 @@ func Test_department_getDepartmentDetails(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			dept := department{
+			dept := Department{
 				deptName: tt.fields.deptName,
 				emp:      tt.fields.emp,
 			}
